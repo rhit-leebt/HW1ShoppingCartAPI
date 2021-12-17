@@ -17,11 +17,16 @@ public abstract class Inventory {
 			}
 			while (reader.hasNext()) {
 				String line = reader.nextLine();
+				String[] 
 				
 			}
 			reader.close();
 		} catch (IOException e) {
 			System.out.println("File mispelled or not found. Try again");
+			s.close();
+			return;
+		} catch (ParseException e) {
+			e.printStackTrace();
 			s.close();
 			return;
 		}
