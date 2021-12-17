@@ -26,3 +26,49 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 4 0 2021-12-16 19:34:17.640
+!MESSAGE The process cannot access the file because another process has locked a portion of the file
+!STACK 0
+java.io.IOException: The process cannot access the file because another process has locked a portion of the file
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at org.eclipse.jgit.util.IO.readFully(IO.java:290)
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectoryInserter.insert(ObjectDirectoryInserter.java:141)
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectoryInserter.insert(ObjectDirectoryInserter.java:122)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:240)
+	at org.eclipse.egit.ui.internal.staging.StagingView$52.run(StagingView.java:3404)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2021-12-16 19:34:29.196
+!MESSAGE The process cannot access the file because another process has locked a portion of the file
+!STACK 0
+java.io.IOException: The process cannot access the file because another process has locked a portion of the file
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at org.eclipse.jgit.util.IO.readFully(IO.java:290)
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectoryInserter.insert(ObjectDirectoryInserter.java:141)
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectoryInserter.insert(ObjectDirectoryInserter.java:122)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:240)
+	at org.eclipse.egit.ui.internal.staging.StagingView$52.run(StagingView.java:3404)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.core 4 0 2021-12-16 19:35:26.612
+!MESSAGE An exception occurred during push on URI https://github.com/rhit-leebt/HW1ShoppingCartAPI.git: https://github.com/rhit-leebt/HW1ShoppingCartAPI.git: not authorized
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: https://github.com/rhit-leebt/HW1ShoppingCartAPI.git: not authorized
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:180)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:217)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/rhit-leebt/HW1ShoppingCartAPI.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:571)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:467)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:160)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1367)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:170)
+	... 4 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2021-12-16 19:35:26.614
+!MESSAGE Can't connect to any repository: https://github.com/rhit-leebt/HW1ShoppingCartAPI.git (https://github.com/rhit-leebt/HW1ShoppingCartAPI.git: not authorized)
